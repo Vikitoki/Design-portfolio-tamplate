@@ -1,0 +1,71 @@
+// Reviews me ================================
+.reviews {
+  padding-bottom: 30px;
+
+  &__item {
+    padding: 0 15px;
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 834px;
+    margin: 0 auto;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 32px;
+    font-style: italic;
+    text-align: center;
+    p {
+       margin-bottom: 10px;
+    }
+    @media (max-width: $md2+px) {
+      max-width: 700px;
+    }
+
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__block {
+    &-1 {
+      padding: 71px 0px;
+      margin-bottom: 10px;
+
+      background-color: #332f30;
+    }
+    &-2 {
+      position: relative;
+      z-index: 2;
+      margin-top: -60px;
+    }
+  }
+}
+.content-reviews {
+  &__photo {
+    display: inline-block;
+    margin-bottom: 17px;
+
+    border: 4px solid #efefef;
+    border-radius: 50%;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #2b2a2c;
+  }
+
+  &__company {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-style: italic;
+    color: #717072;
+  }
+}

@@ -1,0 +1,172 @@
+.contacts {
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  visibility: hidden;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  overflow: auto;
+
+  transition: all 0.2s linear;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    .contacts__inner,
+    .contacts__close {
+      transform: translateX(0);
+    }
+  }
+
+  &__inner {
+    height: 100%;
+    width: 100%;
+    max-width: 430px;
+    margin-right: auto;
+    padding: 28px 32px;
+
+    background-color: #fff;
+
+    transform: translateX(-100%);
+
+    transition: transform 0.4s ease;
+    @media (max-width: $md2+px) {
+      margin-right: 0;
+      padding-top: 70px;
+      max-width: none;
+      min-height: 750px;
+    }
+  }
+
+  &__close {
+    display: inline-block;
+    width: 34px;
+    width: 34px;
+
+    border: none;
+    background: none;
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+
+    overflow: hidden;
+
+    transform: translateX(170%);
+    transition: transform 0.4s ease;
+
+    img {
+      display: block;
+
+      transition: transform 0.2s linear;
+      &:hover {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__header {
+    margin-bottom: 35px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    font-size: 45px;
+    font-weight: 700;
+    color: #2b2a2c;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #2b2a2c;
+  }
+
+  &__social {
+    margin-bottom: 45px;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 23px;
+
+    font-size: 13px;
+    font-weight: 300;
+    color: #2b2a2c;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &-phone {
+      background: url(../../images/phone.png) 0 0 no-repeat;
+    }
+
+    &-mail {
+      background: url(../../images/message.png) 0 0 no-repeat;
+    }
+  }
+}
+
+.form-contacts {
+  &__input {
+    margin-bottom: 27px;
+
+    font-size: 12px;
+    font-weight: 400;
+    color: #2b2a2c;
+    input,
+    textarea {
+      width: 100%;
+      padding: 21px 27px;
+      border: 1px solid #707070;
+      border-radius: 27px;
+
+      transition: border-color 0.2s linear;
+      &:focus {
+        border-color: #000;
+      }
+    }
+    textarea {
+      resize: none;
+      min-height: 202px;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    font-size: 12px;
+    font-weight: 700;
+    color: #2b2a2c;
+  }
+
+  &__btn {
+    text-align: right;
+  }
+
+  &__submit {
+    padding: 18px;
+    min-width: 176px;
+    margin-right: 0;
+
+    font-weight: 400;
+    letter-spacing: 1.1px;
+
+    border-radius: 50px;
+  }
+}

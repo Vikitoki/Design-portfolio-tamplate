@@ -1,0 +1,147 @@
+// News ================================
+
+.news {
+  padding: 51px 0 156px;
+  @media (max-width: $md1+px) {
+   padding: 25px 0 75px;
+ }
+ @media (max-width: $md3+px) {
+   padding: 25px 0 40px;
+ }
+  &__link {
+    display: block;
+    text-align: right;
+    margin-top: 40px;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #717072;
+    letter-spacing: 0.7px;
+
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: $md1+px) {
+      margin-top: 20px;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+
+    font-size: 45px;
+    font-weight: 700;
+    color: #2b2a2c;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__content {
+    margin: 0 -15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__suptitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: #717072;
+    text-align: center;
+  }
+
+  &__container {
+    margin-top: 56px;
+  }
+
+  &__item {
+    width: 33.33333%;
+    padding: 0 15px;
+    margin-bottom: 40px;
+    @media (max-width: $md2+px) {
+      width: 50%;
+    }
+    @media (max-width: $md3+px) {
+      width: 100%;
+    }
+  }
+}
+
+.item-news {
+  &__header {
+  }
+
+  &__content {
+    padding-top: 24px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+
+    font-size: 18px;
+    font-weight: 700;
+    color: #2b2a2c;
+    text-transform: uppercase;
+  }
+
+  &__category {
+    margin-bottom: 29px;
+
+    font-size: 12px;
+    font-weight: 400;
+    color: #2b2a2c;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 37px;
+
+    font-size: 12px;
+    font-weight: 300;
+    color: #717072;
+    line-height: 24px;
+  }
+
+  &__btn {
+    margin-top: 37px;
+  }
+}
+.header-news {
+  position: relative;
+  &__link {
+  }
+
+  &__photo {
+    display: block;
+    height: 100%;
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+  }
+
+  &__date {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 77px;
+    width: 77px;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+
+    background-color: #2b2a2c;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    span {
+      margin-bottom: 5px;
+
+      display: block;
+      text-align: center;
+    }
+  }
+}

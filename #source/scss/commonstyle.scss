@@ -1,0 +1,152 @@
+// Btn ==============================
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 12px 42px;
+
+  line-height: 15px;
+
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 19px;
+
+  font-size: 14px;
+  font-weight: 700;
+  color: #2b2a2c;
+  text-transform: uppercase;
+  text-align: center;
+
+  cursor: pointer;
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+
+
+.btn--nav {
+  margin-left: 18px;
+}
+
+.btn--tblack {
+  border: 1px solid #2b2a2c;
+  &:hover {
+    background-color: #2b2a2c;
+    color: #fff;
+  }
+  &:focus {
+    background-color: #1c1c1d;
+  }
+}
+
+.btns {
+  margin-right: 20px;
+}
+
+.btn--black {
+  color: #fff;
+  background-color: #2b2a2c;
+
+  box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.25);
+
+  transition: background-color 0.2s linear, color 0.2s linear;
+  &:hover {
+    background-color: #6a696b;
+  }
+  &:focus {
+    background-color: #464646;
+  }
+}
+
+.btn--gray {
+  color: #6a696b;
+  border-color: #6a696b;
+  padding: 13px 27px;
+  border-width: 1px;
+  &:hover {
+    color: #fff;
+    background-color: #6a696b;
+  }
+  &:focus {
+    background-color: #464646;
+  }
+}
+
+.btn--tgray {
+  padding: 10px 30px;
+  border-color: #8d8d8e;
+  color: #8d8d8e;
+  &:hover {
+    background-color: #c9c9c9;
+    color: #000;
+  }
+  &:focus {
+    background-color: #e6e1e1;
+  }
+}
+
+.btn--work {
+  padding: 10px 25px;
+  @extend .btn--tblack;
+}
+
+.btn--resume {
+  margin: 0 5px;
+  padding: 10px;
+  min-width: 160px;
+}
+
+.scroll-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+
+  background: none;
+  border: none;
+  background-color: rgb(189, 174, 174);
+  border-radius: 50%;
+
+  position: fixed;
+  right: 60px;
+  bottom: 20px;
+  z-index: 1;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.2s ease;
+  img {
+    width: 35px;
+    height: 35px;
+    display: block;
+    max-width: 100%;
+  }
+
+  &:focus{
+     outline: none;
+  }
+
+  &:hover {
+    transform: translateY(-10%);
+  }
+
+  &.show {
+    opacity: 0.5;
+    visibility: visible;
+  }
+
+  @media (max-width: $md2+px) {
+    right: 20px;
+  }
+}
+
+// Body ==============================
+
+body {
+  &.no--scroll {
+    overflow: hidden;
+  }
+}
+
+.hide {
+  display: none;
+}

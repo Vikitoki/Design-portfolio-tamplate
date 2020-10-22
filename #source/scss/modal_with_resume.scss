@@ -1,0 +1,389 @@
+.resume {
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  visibility: hidden;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  overflow: auto;
+  transition: all 0.2s linear;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__close {
+    display: inline-block;
+    width: 34px;
+    width: 35px;
+
+    border: none;
+    background: none;
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+
+    img {
+      display: block;
+      transition: transform 0.2s linear;
+      &:hover {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1241px;
+    margin: auto;
+
+    background-color: #fff;
+
+    position: relative;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 730px;
+    padding: 80px 15px 66px;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 75px;
+    @media (max-width: $md3+px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 55px;
+
+    font-size: 45px;
+    font-weight: 700;
+    color: #2b2a2c;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__footer {
+    margin-top: 75px;
+    @media (max-width: $md3+px) {
+      margin-top: 30px;
+    }
+  }
+
+  &__topbtns {
+    @media (max-width: $md3+px) {
+      button {
+         margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.description-resume {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+
+    background-color: #6a696b;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+
+    transform: translateX(-50%);
+    @media (max-width: $md3+px) {
+      display: none;
+    }
+  }
+  &__experience,
+  &__education {
+    width: 50%;
+    @media (max-width: $md3+px) {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__experience {
+    text-align: right;
+    padding-right: 40px;
+    @media (max-width: $md3+px) {
+      text-align: left;
+      padding: 0;
+    }
+  }
+
+  &__education {
+    text-align: left;
+
+    padding-left: 40px;
+    @media (max-width: $md3+px) {
+      padding: 0;
+    }
+  }
+}
+
+.experience-resume {
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    margin-bottom: 45px;
+    &:last-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__year {
+    margin-bottom: 25px;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #2b2a2c;
+    text-decoration: underline;
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__job {
+    margin-bottom: 5px;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #2b2a2c;
+  }
+
+  &__position {
+    margin-bottom: 15px;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #2b2a2c;
+  }
+
+  &__text {
+    font-size: 12px;
+    font-weight: 300;
+    color: #6a696b;
+    line-height: 18px;
+  }
+}
+
+.title {
+  &__resume {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2b2a2c;
+    text-transform: uppercase;
+
+    margin-bottom: 37px;
+    @media (max-width: $md3+px) {
+      font-size: 32px;
+    }
+  }
+}
+
+.education-resume {
+  &__title {
+  }
+
+  &__content {
+  }
+
+  &__item {
+    margin-bottom: 45px;
+    &:last-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__year {
+    margin-bottom: 25px;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #2b2a2c;
+    text-decoration: underline;
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__job {
+    margin-bottom: 5px;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #2b2a2c;
+  }
+
+  &__position {
+    font-size: 14px;
+    font-weight: 400;
+    color: #2b2a2c;
+  }
+
+  &__skills {
+    margin-bottom: 31px;
+  }
+}
+
+.skills-resume {
+  &__title {
+    margin-bottom: 26px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 300;
+    color: #2b2a2c;
+    @media (max-width: $md3+px) {
+      font-size: 12px;
+    }
+    li {
+      margin-bottom: 10px;
+      display: inline-block;
+
+      position: relative;
+      &::before,
+      &::after {
+        content: "";
+        display: inline-block;
+        height: 6px;
+
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        z-index: 1;
+
+        transform: translateY(-50%);
+      }
+      &::before {
+        width: 140px;
+
+        background-color: #efefef;
+      }
+
+      &::after {
+        background-color: #6a696b;
+      }
+    }
+  }
+
+  &__stat {
+    &-1 {
+      &::after {
+        width: 90px;
+      }
+    }
+
+    &-2 {
+      &::after {
+        width: 100px;
+      }
+    }
+
+    &-3 {
+      &::after {
+        width: 95px;
+      }
+    }
+
+    &-4 {
+      &::after {
+        width: 120px;
+      }
+    }
+  }
+}
+
+.awards-resume {
+  &__title {
+    margin-bottom: 33px;
+  }
+
+  &__item {
+    margin-bottom: 32px;
+    position: relative;
+
+    padding-left: 50px;
+    &:last-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__year {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    margin-bottom: 25px;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #2b2a2c;
+    text-decoration: underline;
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__reward {
+    margin-bottom: 5px;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #2b2a2c;
+    text-transform: uppercase;
+  }
+
+  &__position {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #2b2a2c;
+  }
+
+  &__text {
+    font-size: 12px;
+    font-weight: 300;
+    color: #6a696b;
+    line-height: 18px;
+  }
+}
